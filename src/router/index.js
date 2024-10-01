@@ -5,6 +5,7 @@ import Sales from '@/modules/sales/views/Sales.vue'
 import Inventory from '@/modules/inventory/views/Inventory.vue'
 import Reports from '@/modules/reports/views/Reports.vue'
 import Login from '@/modules/auth/views/Login.vue'
+import NotFound from '@/modules/common/views/404.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,6 +40,11 @@ const router = createRouter({
       path: '/reports',
       name: 'Reports',
       component: Reports
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'Notfound',
+      component: NotFound
     }
   ]
 })

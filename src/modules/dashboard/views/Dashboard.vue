@@ -42,12 +42,6 @@ const toggleModal = async ({ id, title, body }) => {
     return
   }
   isModalOpen.value = true
-  /* store.dispatch("common/setModalData", {
-    active: true,
-    imageUrl,
-    title,
-    body,
-  }) */
 };
 
 const errorModal = (error) => {
@@ -69,11 +63,10 @@ const closeModal = () => {
 
 <template>
   <div class="dark:bg-gray-900">
-    <h3 class="text-3xl font-medium text-gray-700 dark:text-gray-100">
+    <h3 class="text-3xl font-medium text-gray-900 dark:text-gray-100">
       Dashboard
     </h3>
     <div v-if="posts.length > 0" class="flex flex-col mt-4 dark:bg-gray-900">
-      <!-- <div class="py-2 my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"> -->
       <div class="hidden lg:inline-block max-w-full align-middle border-b border-gray-200 shadow sm:rounded-lg">
         <BaseTable :tableData="posts" @toggle-modal="toggleModal" />
       </div>
@@ -81,7 +74,6 @@ const closeModal = () => {
         <BaseGrid :tableData="posts" @toggle-modal="toggleModal" />
       </div>
       <BasePagination :numberOfRecords="totalPosts.length" @update_view="updateTable($event)" class="mt-4" />
-      <!-- </div> -->
     </div>
     <h4 class="flex mt-8 text-lg justify-center" v-else>No records to show.</h4>
     <BaseGridModal :isModalOpen="isModalOpen" @toggle-modal="closeModal">

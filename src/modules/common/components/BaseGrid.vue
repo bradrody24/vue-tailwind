@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import BaseTooltip from "@/modules/common/components/BaseTooltip.vue"
 defineEmits(['toggle-modal'])
 defineProps({
   tableData: {
@@ -20,13 +21,14 @@ const toggleRead = (id) => {
 
 <template>
   <div v-for="(item, index) in tableData" :key="index"
-    class="bg-white space-y-3 p-4 rounded-lg shadow dark:bg-gray-700 dark:text-gray-100">
+    class="bg-white space-y-3 p-4 shadow dark:bg-gray-700 dark:text-gray-100 border-t-2 border-indigo-600 dark:border-indigo-300">
     <div class="text-sm text-gray-700">
       <div class="flex justify-between">
         <div class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">{{
     item.id }}
         </div>
         <button @click="toggleRead(item.id)" class="text-indigo-600 dark:text-indigo-300">
+          <BaseTooltip tipText="Read more" />
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="size-4">
             <path stroke-linecap="round" stroke-linejoin="round"

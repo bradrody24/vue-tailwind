@@ -29,13 +29,13 @@ const login = () => {
         <label class="block">
           <span class="text-sm text-gray-700 dark:text-gray-300 pl-2">Email</span>
           <input v-model="email" type="email"
-            class="block w-full mt-1 p-2 border-gray-200 rounded-md focus:border-indigo-600 focus:ring focus:ring-opacity-40 focus:ring-indigo-500">
+            class="dark:bg-gray-900 bg-gray-100 block w-full mt-1 p-2 border-gray-600 rounded-md focus:border-indigo-600 focus:ring focus:ring-opacity-40 focus:ring-indigo-500">
         </label>
 
         <label class="block mt-3">
           <span class="text-sm text-gray-700 dark:text-gray-300 pl-2">Password</span>
           <input v-model="password" type="password"
-            class="block w-full mt-1 p-2 border-gray-200 rounded-md focus:border-indigo-600 focus:ring focus:ring-opacity-40 focus:ring-indigo-500">
+            class="dark:bg-gray-900 bg-gray-100 block w-full mt-1 p-2 border-gray-200 rounded-md focus:border-indigo-600 focus:ring focus:ring-opacity-40 focus:ring-indigo-500">
         </label>
 
         <div class="flex items-center justify-between mt-4">
@@ -55,7 +55,7 @@ const login = () => {
 
         <div class="mt-6">
           <button type="submit"
-            class="w-full px-4 py-2 text-sm text-center text-white dark:text-gray-200 bg-indigo-600 dark:bg-indigo-400 rounded-md focus:outline-none dark:hover:bg-indigo-500">
+            class="w-full px-4 py-2 text-sm text-center text-white dark:text-gray-200 bg-indigo-600 dark:bg-indigo-400 rounded-md focus:outline-none hover:bg-indigo-500 dark:hover:bg-indigo-500">
             Sign in
           </button>
         </div>

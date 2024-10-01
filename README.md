@@ -1,4 +1,4 @@
-# Vue Dashboard Project
+# Vue Tailwind Project
 
 ## Overview
 
@@ -23,11 +23,11 @@ This Vue application is built with Vite and leverages Tailwind CSS for styling, 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/vue-dashboard.git
+   git clone https://github.com/bradrody24/vue-tailwind.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd vue-dashboard
+   cd vue-tailwind
    ```
 3. Install dependencies:
    ```bash
@@ -42,20 +42,20 @@ To start the development server, run:
 npm run dev
 ```
 
-Open your browser and navigate to `http://localhost:3000`.
+Open your browser and navigate to `http://localhost:port#`.
 
 ## Project Structure
 
 - `src/`: Main application source
 - `src/router/`: Vue Router configuration
 - `src/store/`: Vuex store management
-- `src/components/`: Vue components (Dashboard, Modal, etc.)
-- `src/styles/`: Tailwind CSS configurations and custom styles
+- `src/modules/`: Vue modules (Dashboard, Auth, Common, etc.)
+- `src/assets/`: Tailwind CSS configurations and custom styles
 
 ## Usage
 
 - On the dashboard, you will see a list of posts fetched from JSONPlaceholder.
-- Click on any post to open a modal that displays detailed information about the post and its comments.
+- Click on any post title to open a modal that displays detailed information about the post and its comments.
 - Use the dark mode toggle in the header to switch between themes.
 
 ## Dependencies
@@ -67,13 +67,3 @@ Open your browser and navigate to `http://localhost:3000`.
 - **Axios**: Promise-based HTTP client
 - **Tailwind CSS**: Utility-first CSS framework
 - **VueUse**: Collection of useful Vue Composition API utilities
-
-## License
-
-This project is licensed under the MIT License.
-
-## Acknowledgments
-
-Thanks to [JSONPlaceholder](https://jsonplaceholder.typicode.com/) for providing a free fake REST API for testing and prototyping.
-
-For more details, feel free to explore the code! Happy coding!

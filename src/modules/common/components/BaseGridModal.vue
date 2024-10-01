@@ -1,7 +1,4 @@
 <script setup>
-import { computed } from 'vue';
-import { useStore } from 'vuex';
-
 defineEmits(['toggle-modal'])
 defineProps({
   isModalOpen: {
@@ -9,17 +6,6 @@ defineProps({
     default: false,
   },
 });
-/* const store = useStore()
-
-const isModalOpen = ref(false)
-
-const comments = computed(() => {
-  return store.getters["dashboard/comments"]
-})
-
-const toggleModal = () => {
-  store.dispatch("common/setModalData", null)
-}; */
 </script>
 
 <template>
@@ -29,7 +15,7 @@ const toggleModal = () => {
       <div class="absolute w-full h-full bg-gray-900 opacity-50 modal-overlay" @click="$emit('toggle-modal')" />
 
       <div
-        class="z-50 w-11/12 mx-auto overflow-y-auto bg-white dark:bg-gray-500 dark:text-gray-100 rounded shadow-lg max-h-screen min-w-prose modal-container md:max-w-xl">
+        class="z-50 w-11/12 mx-auto overflow-y-auto bg-gray-200 dark:bg-gray-800 dark:text-gray-100 rounded shadow-lg max-h-screen min-w-prose modal-container md:max-w-xl">
         <div @click="$emit('toggle-modal')"
           class="absolute top-0 right-0 z-50 flex flex-col items-center mt-4 mr-4 text-sm text-white cursor-pointer modal-close">
           <svg class="text-white fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -41,14 +27,7 @@ const toggleModal = () => {
 
         <div class="px-6 py-4 text-left modal-content">
           <slot />
-
-          <!-- Footer -->
           <div class="flex justify-end pt-2">
-            <!-- <button
-                class="p-3 px-6 py-3 mr-2 text-indigo-500 bg-transparent rounded-lg hover:bg-gray-100 hover:text-indigo-400 focus:outline-none"
-                @click="open = false">
-                Close
-              </button> -->
             <button
               class="px-6 py-3 font-medium tracking-wide text-gray-800 bg-gray-300 rounded-md hover:bg-gray-400 focus:outline-none"
               @click="$emit('toggle-modal')">

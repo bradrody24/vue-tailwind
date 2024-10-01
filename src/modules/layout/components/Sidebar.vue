@@ -4,10 +4,10 @@ import { useSidebar } from '../../../composables/useSidebar'
 
 const { isOpen } = useSidebar()
 const activeClass = ref(
-  'bg-gray-600 bg-opacity-25 text-gray-100 border-gray-100',
+  'bg-gray-600 bg-opacity-25 text-gray-100 border-indigo-700 dark:border-indigo-700',
 )
 const inactiveClass = ref(
-  'border-gray-900 text-gray-500 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-100',
+  'border-gray-700 dark:border-gray-400 text-gray-500 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-100',
 )
 </script>
 
@@ -19,18 +19,17 @@ const inactiveClass = ref(
     <!-- Backdrop -->
 
     <div :class="isOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
-      class="fixed inset-y-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-gray-100 dark:bg-gray-700 lg:translate-x-0 lg:static lg:inset-0">
-      <router-link class="flex items-center justify-center border-b-4 border-indigo-600" to="/dashboard">
+      class="fixed inset-y-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-gray-900 dark:bg-indigo-200 lg:translate-x-0 lg:static lg:inset-0">
+      <router-link class="flex items-center justify-center border-b-2 border-indigo-600" to="/dashboard">
         <div class="flex items-center">
 
-          <span class="mx-2 pt-5 pb-4 text-xl font-bold text-indigo-600 dark:text-indigo-300">Vue Tailwind</span>
+          <span class="mx-2 pt-5 pb-4 text-xl font-bold text-gray-100 dark:text-gray-900">Vue Tailwind</span>
         </div>
       </router-link>
 
       <nav class="mt-10">
-        <router-link
-          class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4 text-indigo-600 dark:text-indigo-300"
-          :class="[$route.name === 'Dashboard' ? activeClass : inactiveClass]" to="/dashboard">
+        <router-link class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4 text-indigo-100 dark:text-gray-900"
+          :class="[$route.name === 'dashboard' ? activeClass : inactiveClass]" to="/dashboard">
           <svg class="w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 10C2 5.58172 5.58172 2 10 2V10H18C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z"
               fill="currentColor" />
@@ -40,8 +39,7 @@ const inactiveClass = ref(
           <span class="mx-4">Dashboard</span>
         </router-link>
 
-        <router-link
-          class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4 text-indigo-600 dark:text-indigo-300"
+        <router-link class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4 text-indigo-100 dark:text-gray-900"
           :class="[$route.name === 'Products' ? activeClass : inactiveClass]" to="/products">
           <svg class="w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -61,8 +59,7 @@ const inactiveClass = ref(
           <span class="mx-4">Products</span>
         </router-link>
 
-        <router-link
-          class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4 text-indigo-600 dark:text-indigo-300"
+        <router-link class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4 text-indigo-100 dark:text-gray-900"
           :class="[$route.name === 'Sales' ? activeClass : inactiveClass]" to="/sales">
           <svg class="w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -79,8 +76,7 @@ const inactiveClass = ref(
           <span class="mx-4">Sales</span>
         </router-link>
 
-        <router-link
-          class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4 text-indigo-600 dark:text-indigo-300"
+        <router-link class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4 text-indigo-100 dark:text-gray-900"
           :class="[$route.name === 'Inventory' ? activeClass : inactiveClass]" to="/Inventory">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
@@ -92,8 +88,7 @@ const inactiveClass = ref(
           <span class="mx-4">Inventory</span>
         </router-link>
 
-        <router-link
-          class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4 text-indigo-600 dark:text-indigo-300"
+        <router-link class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4 text-indigo-100 dark:text-gray-900"
           :class="[$route.name === 'Reports' ? activeClass : inactiveClass]" to="/reports">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
             <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
